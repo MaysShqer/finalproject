@@ -3,6 +3,7 @@ import dataset
 db=dataset.connect("postgres://typqlxxugqjyof:9d54ce31d149842942fc9ad81e1ffe1008c330e8b13c04a775867c3b5b3eee64@ec2-54-221-254-72.compute-1.amazonaws.com:5432/d1i3hr803iem45")
 app = Flask(__name__)
 
+
 @app.route('/')
 @app.route('/home')
 def homepage():
@@ -72,6 +73,7 @@ def signup():
 @app.route('/error')
 def error():
 	return render_template('error.html')
+
 
 if __name__ == "__main__":
     app.run(port=3000)
