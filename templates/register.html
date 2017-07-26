@@ -1,8 +1,25 @@
 {% extends "base.html" %}
 
 {% block body %}
-<h1>Register Page</h1>
 
-<!-- TODO: implement register page -->
+	<form action = "/signup" method="POST">
+		
+		firstname<br>
+		<input type="text" name="firstname" required><br>
+		lastname<br>
+		<input type="text" name="lastname" required><br>
+		username<br>
+		<input type="text" name="username" required><br>
+		hometown<br>
+		<input type="text" name="hometown" required><br>
+		email<br>
+		<input type="email" name="email" required><br>
+		perosnalwebsitelink<br>
+		<input type="text" name="personalwebsitelink" required><br>
+		<input type="submit" value="submit">
+	</form>
+
+
+{{taken}}
 
 {% endblock %}

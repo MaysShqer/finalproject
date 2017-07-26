@@ -1,8 +1,72 @@
 {% extends "base.html" %}
-
 {% block body %}
 
-<h1>Home Page</h1>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+ <img src="../static/images/d.jpg" style="width:500px">
+</div>
+
+<div class="mySlides fade">
+ <img src="../static/images/o.jpg" style="width:500px">
+</div>  
+
+<div class="mySlides fade">
+ <img src="../static/images/c.jpg" style="width:500px ">
+</div>
+
+<div class="mySlides fade">
+ <img src="../static/images/e.jpg" style="width:500px">
+</div>
+
+
+<div class="mySlides fade">
+  <img src="../static/images/f.jpg" style="width:50%">
+</div>
+
+<div class="mySlides fade">
+  <img src="../static/images/p.jpg" style="width:50%">
+</div>
+
+</div>
+<br>
+
+
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+<font color="grey"><h1>Code For Palestine, a program which is talking about programing and design thinking, for me it is one of my favouite camps, because i am learning and having fun at the same time, these two weeks were one of my best days i've ever had.
+coding:with miss minymoh which it was perfect with her thanks for her.
+design thinking: with matt which is made me look inside my self and descover things about my self i wasn't know . 
+having fun:with all the students and leaders and instructures .
+it happens in paltel academy.</h1></font>
 
 <!-- TODO: implement home page. -->
 

@@ -2,8 +2,20 @@
 
 {% block body %}
 
-<h1>Feed Page</h1>
-
-<!-- TODO: implement feed page -->
-
+<form action="/newfeed" method="POST">
+username<br>
+	<input type="text" name="username"><br>
+post<br>
+	<input type="text" name="post"><br>
+<br>
+	<input type="submit" value="post"><br>
+</form>
+<table>
+{% for person in allfeed %}
+<tr>
+    <td>{{person.username}}</td>
+    <td>{{person.post}}</td>
+</tr>
+{% endfor %}
+</table>
 {% endblock %}
