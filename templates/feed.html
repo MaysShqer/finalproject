@@ -2,19 +2,32 @@
 
 {% block body %}
 
+<style>
+.input1{
+	margin-left: 485px;
+}
+
+.input3{
+	margin-left: 489px;
+	width: 238px;
+	margin-bottom: 25px;
+}
+</style>
+<h1 style ="color:white; margin-left:423px;">ENTER YOUR FEED</h1>
 <form action="/newfeed" method="POST">
-username<br>
-	<input type="text" name="username"><br>
-post<br>
-	<input type="text" name="post"><br>
 <br>
-	<input type="submit" value="post"><br>
+	<input class = "input1" type="text" name="username" placeholder = "Username"><br>
+<br>
+	<input class = "input1" type="text" name="post" placeholder = "post"><br>
+<br>
+	<input class = "input3" type="submit" value="post"><br>
 </form>
-<table>
-{% for person in allfeed %}
+<table style="color:#877b7b;" class="w3-table w3-striped">
+{% for person in feedb %}
 <tr>
     <td>{{person.username}}</td>
     <td>{{person.post}}</td>
+    <td> {{person.time_string}}</td>
 </tr>
 {% endfor %}
 </table>

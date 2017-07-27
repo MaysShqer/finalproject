@@ -1,24 +1,33 @@
 {% extends "base.html" %}
 {% block body %}
 
-<table class="w3-table w3-striped">
+<style type="text/css">
+th{
+  color: white;
+}
+
+</style>
+
+<table style="color:#877b7b;" class="w3-table w3-striped">
   <tr>
     <th>firstname</th>
     <th>lastname</th>
     <th>username</th>
     <th>hometown</th>
     <th>email</th>
-    <th>personal website link</th>
-  </tr>
+    <th>personalwebsitelink</th>
+  </tr> 
 
-  {% for person in allusers %}
+  {% for person in alluser %}
   <tr>
     <td>{{person.firstname}}</td>
     <td>{{person.lastname}}</td>
     <td>{{person.username}}</td>
-    <td>{{person.homwtown}}</td>
-    <td>{{person.email}}</td>
-    <td>{{person.personalwebsitelink}}</td>
+    <td>{{person.hometown}}</td>
+    <td>{{person.email}}</td> 
+    <td><a href="{{person.website}}">{{person.website}}</a></td>
+
+   
 
   </tr>
   {% endfor %}

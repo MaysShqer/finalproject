@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block body %}
+<style type="text/css">
+.input1{
+	margin-left: 500px;
+	width: 297px;
+	padding: 10px;
+}
+</style>
+	<h1 style = "margin-left:585px;color:white;">LOGIN</h1>
+	<form action = "/login" method="POST">
+		
+		<input class = "input1" type="link" name="username" placeholder = "Username" required><br>
+		<input class = "input1" type="link" name="password" placeholder = "Password" required><br>
+
+		<input style ="margin-left:499px;width:300px;" type="submit" value="submit">
+	</form>
+
+
+{{taken}}
+
+
+{% endblock %}
